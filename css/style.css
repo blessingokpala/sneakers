@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 65em;
+}
+/* spacing feature adds margin to the class of sibling above it. here it adds margin-top to the class of btn and p but not to h1*/
+.spacing > * + * {
+  margin-top: var(--spacer, 1rem);
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffc600, #00296b, #d40000);
+  color: #fff;
+  padding: 0.7em 0.5em;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: transform 250ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+/* focus transforms the button when hovered */
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  scale: 0.9;
+}
+
+.primary-title {
+  font-size: 3rem;
+  /* clamp automatically resizes the font size on diff. screens   font-size: clamp(2rem, calc(5vw + 1rem), 4.5rem); */
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+.hero {
+  text-align: center;
+  padding: 4.5rem 0;
+  background: #251351;
+  color: #fff;
+}
+section {
+  padding: 3em 0;
+}
+.section-title {
+  text-align: center;
+  font-size: clamp(1rem, calc(2vw + 1rem), 3rem);
+  margin-bottom: 3rem;
+}
+
+.featured {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background: #aca7a7;
+}
+
+.featured-product:hover,
+.featured-product:focus {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+.product {
+  background: radial-gradient(ellipse at top, #251351, transparent),
+    radial-gradient(ellipse at center, #ffc600, transparent),
+    radial-gradient(ellipse at bottom, #d40000, transparent);
+  border-radius: 20px;
+  padding: 3em;
+  margin-bottom: 3em;
+  text-align: center;
+  color: #fff;
+}
+
+.product-img {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.product-img:hover,
+.product-img:focus {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+.product-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
